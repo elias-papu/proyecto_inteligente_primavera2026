@@ -1,0 +1,18 @@
+title: "Péndulo Invertido — DQN"
+description: "Control Inteligente mediante Deep Q-Learning aplicado a un péndulo invertido físico. Transferencia Sim-to-Real. IBERO Ciudad de México, Primavera 2026."
+theme: just-the-docs
+color_scheme: light
+url: ""
+baseurl: "/proyecto_inteligente_primavera2026"
+nav_sort: order
+search_enabled: true
+back_to_top: true
+back_to_top_text: "↑ Subir"
+math: mathjax
+
+aux_links:
+  "GitHub":
+    - "https://github.com/elias-papu/proyecto_inteligente_primavera2026"
+
+plugins:
+  - jekyll-seo-tag
