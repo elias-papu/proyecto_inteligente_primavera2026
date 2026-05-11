@@ -24,7 +24,13 @@ Métricas de entrenamiento, prueba greedy y desempeño en hardware real.
 
 El agente DQN fue entrenado durante **4,000 episodios** en el entorno de simulación Simscape. La curva de recompensa muestra convergencia clara a partir del episodio ~500, con alta varianza inicial típica de la exploración ε-greedy.
 
+![Gráfica de entrenamiento DQN 4000 episodios]({{ '/assets/img/entrenamiento_4000.png' | relative_url }})
+
+*De arriba a abajo: reward por episodio con promedio móvil (naranja), tiempo en equilibrio por episodio, tasa de éxito vs. límite de posición, ángulo θ del último episodio, y posición x junto con esfuerzo de control u.*
+
 ### Métricas Finales (últimos 50 episodios)
+
+![Resumen numérico de los últimos 50 episodios]({{ '/assets/img/entrenamiento_stats.png' | relative_url }})
 
 | Métrica | Valor |
 |---|---|
@@ -38,7 +44,11 @@ El agente DQN fue entrenado durante **4,000 episodios** en el entorno de simulac
 
 ## Prueba de Política Greedy Final
 
-Al aplicar la política greedy (ε = 0) sobre un episodio completo de prueba:
+Al aplicar la política greedy (ε = 0) sobre un episodio completo de prueba en el hardware físico:
+
+![Política greedy final aplicada al péndulo real]({{ '/assets/img/politica_greedy.png' | relative_url }})
+
+*Gráfica de la prueba greedy en hardware: ángulo θ (arriba), posición del carro x (centro) y esfuerzo de control u (abajo) a lo largo de 16 segundos.*
 
 | Métrica | Valor |
 |---|---|
@@ -49,9 +59,7 @@ Al aplicar la política greedy (ε = 0) sobre un episodio completo de prueba:
 
 ## Análisis de las Gráficas
 
-### Simulación (Episodio 4000)
-
-La gráfica de entrenamiento muestra cinco subplots:
+### Entrenamiento (4,000 episodios)
 
 1. **Reward por episodio** — converge a ~40,000–50,000 con varianza residual. La línea naranja (promedio móvil) confirma la tendencia ascendente.
 2. **Top time** — el tiempo en equilibrio crece consistentemente hasta saturar en 10 s (límite del episodio).
@@ -60,8 +68,6 @@ La gráfica de entrenamiento muestra cinco subplots:
 5. **Posición x y esfuerzo u** — el carro converge a una posición lateral con esfuerzo de control moderado.
 
 ### Política Greedy en Hardware
-
-La gráfica de la prueba real muestra:
 
 - **θ** oscila con alta frecuencia (chattering visible), indicando que la política discreta aplica acciones de signo opuesto rápidamente para mantenerse en el punto de equilibrio. Esto es esperable con 41 acciones discretas.
 - **x** converge a ~−120 mm desde el centro y permanece estable, lo que indica que el carro encontró una posición de trabajo sin llegar al límite.

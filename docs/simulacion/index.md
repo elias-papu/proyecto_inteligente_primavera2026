@@ -29,6 +29,18 @@ El entorno fue desarrollado en **MATLAB/Simscape** replicando la dinámica del p
 | **Límite de episodio** | 600 pasos · `θ` fuera de ±160° termina el episodio |
 | **Factor de descuento** | γ configurado en entrenamiento |
 
+## Curva de Entrenamiento — 4,000 Episodios
+
+![Gráfica completa del entrenamiento DQN durante 4000 episodios]({{ '/assets/img/entrenamiento_4000.png' | relative_url }})
+
+*Evolución del entrenamiento: reward por episodio (promedio móvil en naranja), tiempo en equilibrio (top time), tasa de éxito vs. límite de posición, y comportamiento del ángulo y posición en el último episodio.*
+
+## Resumen de los Últimos 50 Episodios
+
+![Resumen estadístico de los últimos 50 episodios de entrenamiento]({{ '/assets/img/entrenamiento_stats.png' | relative_url }})
+
+*Métricas finales: reward medio 42,877.5, tasa de éxito 90 %, tiempo promedio en equilibrio 9.02 s.*
+
 ## Comparativa: Shallow Q-Learning vs. DQN
 
 | Aspecto | Shallow Q-Learning (NNQ) | Deep Q-Learning (DQN) |
@@ -38,7 +50,7 @@ El entorno fue desarrollado en **MATLAB/Simscape** replicando la dinámica del p
 | Optimizador | Básico | Adam |
 | Salidas Q | 41 | 41 |
 | Convergencia | Inestable / subóptima | **Estable y óptima** |
-| Control resultante | Oscilatório | **Equilibrio sostenido** |
+| Control resultante | Oscilatorio | **Equilibrio sostenido** |
 
 > La arquitectura profunda permitió al agente abstraer características robustas del entorno, logrando convergencia estable donde la red superficial fallaba.
 

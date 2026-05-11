@@ -21,6 +21,20 @@ El prototipo consiste en un **carro deslizante** sobre una guía lineal de alumi
 
 El sistema fue diseñado, fabricado e instrumentado íntegramente por el equipo, incluyendo piezas impresas en 3D (PLA) en color rojo para el carro y el soporte del encoder.
 
+## Fotografías del Prototipo
+
+![Close-up del encoder rotatorio montado en el carro rojo]({{ '/assets/img/encoder_pendulo.jpg' | relative_url }})
+
+*Encoder rotatorio de alta resolución montado en el carro impreso en 3D (PLA rojo) sobre la guía lineal.*
+
+![Vista completa del sistema péndulo invertido]({{ '/assets/img/pendulo_completo.jpg' | relative_url }})
+
+*Vista general del sistema: guía lineal de ~1 m, carro motorizado con correa dentada y péndulo articulado.*
+
+![Laboratorio con el equipo completo de trabajo]({{ '/assets/img/laboratorio.jpg' | relative_url }})
+
+*El equipo durante las sesiones de desarrollo y prueba en el laboratorio de electrónica de la IBERO.*
+
 ## Lista de Materiales (BOM)
 
 | Componente | Especificación | Cantidad |
@@ -35,16 +49,6 @@ El sistema fue diseñado, fabricado e instrumentado íntegramente por el equipo,
 | Driver de motor | Puente H | 1 |
 | Fuente de alimentación | 12 V DC | 1 |
 | Estructuras de soporte | Aluminio perfilado | 2 |
-
-## Fotografías del Prototipo
-
-Agrega aquí tus imágenes con la siguiente sintaxis:
-
-```
-![Encoder del péndulo]({{ '/assets/img/encoder_pendulo.jpg' | relative_url }})
-```
-
-> **Nota:** Sube tus imágenes a la carpeta `assets/img/` del repositorio.
 
 ---
 
